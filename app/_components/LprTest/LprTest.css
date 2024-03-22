@@ -1,0 +1,123 @@
+.testOurApi_wrapper {
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: end;
+}
+
+.uploadBox {
+  padding: 1.5rem;
+  background-color: #000;
+  width: max-content;
+  max-width: 300px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.dropZone {
+  color: #fff;
+  background-color: #2a2a2a;
+  border: 1px solid blue;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dropZone_icon {
+  font-size: 2rem;
+}
+
+.uploadBtn {
+  width: 100%;
+  border: none;
+  background-color: blue;
+  color: #fff;
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.uploadBtn:hover {
+  background-color: rgb(0, 0, 161);
+}
+
+.uploadBtn.loading {
+  background-color: rgba(54, 54, 151, 0.548);
+  pointer-events: none;
+  position: relative;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  animation: opacity 2.5s linear infinite;
+}
+
+.uploadBtn.loading .loadingIcon {
+  animation: spin 1s linear infinite;
+}
+
+.previewBox {
+  color: #000;
+}
+
+.previewBox .imageWrapper {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.resultBox {
+  padding: 10px;
+  border-radius: 10px;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.plateNumberImage {
+  position: relative;
+  height: 30px;
+  width: 70px;
+}
+
+.confidence {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0.7;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.7;
+  }
+}
