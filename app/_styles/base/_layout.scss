@@ -1,0 +1,8 @@
+.section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.section + .section {
+  margin-top: 3rem;
+}
