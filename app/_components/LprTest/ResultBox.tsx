@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { CircularProgressbar } from "react-circular-progressbar";
 import ResultDetection from "./ResultDetection";
 import { v4 } from "uuid";
@@ -10,8 +10,22 @@ type Props = {
 
 const ResultBox = (props: Props) => {
   const { result } = props;
-  const fullImage = result.full_image;
-  const detections = result.data;
+  const [detections, setDetections] = useState([
+    {
+      confidence: 85.5,
+      plate_image: "/images/defaultplate.png",
+      plate_number: " 1 7 1 أ أ أ ",
+    },
+  ]);
+
+  const [imagePath, setImagePath] = useState("");
+
+  useEffect(() => {
+    if (result.success) {
+      setDetections(result.data);
+      setImagePath("https://lpr.royal-defense.cloud/detections/");
+    }
+  }, [result]);
 
   return (
     <div className="resultBox">
@@ -20,7 +34,7 @@ const ResultBox = (props: Props) => {
       {detections != null &&
         detections.length > 0 &&
         detections.map((detect) => (
-          <ResultDetection key={v4()} detect={detect} />
+          <ResultDetection key={v4()} detect={detect} imagePath={imagePath} />
         ))}
     </div>
   );

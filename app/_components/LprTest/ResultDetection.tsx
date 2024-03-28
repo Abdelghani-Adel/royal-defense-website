@@ -4,10 +4,11 @@ import { CircularProgressbar } from "react-circular-progressbar";
 
 type Props = {
   detect: ILprTestDetection;
+  imagePath: string;
 };
 
 const ResultDetection = (props: Props) => {
-  const { detect } = props;
+  const { detect, imagePath } = props;
 
   return (
     <div className="d-flex flex-column gap-2">
@@ -15,7 +16,7 @@ const ResultDetection = (props: Props) => {
         <strong>Plate Number: </strong> '<span>{detect?.plate_number}</span>'
       </p>
       <Image
-        src={`https://lpr.royal-defense.cloud/detections/${detect.plate_image}`}
+        src={`${imagePath}${detect.plate_image}`}
         alt=""
         width={200}
         height={80}
