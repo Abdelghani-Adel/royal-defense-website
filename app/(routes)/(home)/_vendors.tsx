@@ -24,13 +24,23 @@ const images = [
 const Vendors = () => {
   return (
     <div className="ourVendors">
-      <h2 className="textSecondary fw-bolder text-center mb-3">
+      <h2
+        className="textSecondary fw-bolder text-center mb-3"
+        data-aos="fade-up"
+        data-aos-offset={100}
+      >
         Our Vendor Partners
       </h2>
 
       <Slider {...settings} className="vendorCarousel">
-        {images.map((image) => (
-          <div className="vendorSlice" key={v4()}>
+        {images.map((image, i) => (
+          <div
+            className="vendorSlice"
+            key={v4()}
+            data-aos="fade-up"
+            data-aos-delay={(i + 1) * 100}
+            data-aos-offset={100}
+          >
             <div className="vendorSlice_inner">
               <div className="vendorSlice_image">
                 <Image fill src={image} alt="" />

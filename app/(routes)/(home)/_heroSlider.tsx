@@ -15,20 +15,34 @@ const HeroSlider = () => {
   return (
     <div className="heroSlider_wrapper">
       <div className="heroSlider_captions">
-        <h1>
+        <h1 data-aos="fade-up" data-aos-once>
           <span className="text-white">Next-Level Solutions </span>{" "}
           <span className="textPrimary">
             Powered by Cutting-Edge Technologies
           </span>
         </h1>
-        <p className="fw-normal">
+        <p
+          className="fw-normal"
+          data-aos="fade-up"
+          data-aos-delay={100}
+          data-aos-once
+          data-aos-offset={-150}
+        >
           <span className="textPrimary fw-bold">Royal Defense </span>
           <span className="text-white">
             provides best-in-class security management solutions.
           </span>
         </p>
 
-        <button className="heroSlider_btn">Get in touch</button>
+        <button
+          className="heroSlider_btn"
+          data-aos="fade-up"
+          data-aos-delay={200}
+          data-aos-once
+          data-aos-offset={-150}
+        >
+          Get in touch
+        </button>
       </div>
 
       <Slider {...settings}>

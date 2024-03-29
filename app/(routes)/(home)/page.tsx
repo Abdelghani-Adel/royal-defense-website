@@ -22,7 +22,11 @@ export default function Home() {
 
       <div className="section bgPrimary solutionsSection">
         <div className="container">
-          <h1 className="text-center text-white mb-4">
+          <h1
+            className="text-center text-white mb-4"
+            data-aos="fade-up"
+            data-aos-offset={100}
+          >
             Solutions & Technologies
           </h1>
           <SolutionsCardList />

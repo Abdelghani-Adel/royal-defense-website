@@ -15,8 +15,13 @@ const settings = {
 const SolutionsCardList = () => {
   return (
     <Slider {...settings}>
-      {cards.map((card) => (
-        <div key={v4()}>
+      {cards.map((card, i) => (
+        <div
+          key={v4()}
+          data-aos="fade-up"
+          data-aos-delay={(i + 1) * 100}
+          data-aos-offset={100}
+        >
           <SolutionCard data={card} />
         </div>
       ))}
