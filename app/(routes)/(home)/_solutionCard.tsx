@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const SolutionCard = () => {
+const SolutionCard = ({ data }: { data: ISolutionCardData }) => {
   return (
     <div className="solutionCard">
       <div className="solutionCard_image">
