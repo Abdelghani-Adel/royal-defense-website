@@ -62,3 +62,44 @@
   border: none;
   cursor: not-allowed;
 }
+
+// ============================================== //
+// PageStripe
+// ============================================== //
+.pageStripe {
+  height: 45vh;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.pageStripBackground {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.pageStripBackground::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  // background: linear-gradient(0, rgba(10, 16, 54, 0.6), #3c3837 40%);
+  opacity: 0.75;
+  // backdrop-filter: blur(4px);
+}
+
+.pageStripeTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  z-index: 2;
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 5px;
+}

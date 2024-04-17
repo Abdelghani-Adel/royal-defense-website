@@ -1,35 +1,20 @@
 import React from "react";
-import Slider from "react-slick";
 import SolutionCard from "./_solutionCard";
 import { v4 } from "uuid";
 
-const settings = {
-  dots: false,
-  autoplay: true,
-  autoplaySpeed: 10000,
-  infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-};
-
-const SolutionsCardList = () => {
+const CardsList = () => {
   return (
-    <Slider {...settings}>
+    <div className="row">
       {cards.map((card, i) => (
-        <div
-          key={v4()}
-          data-aos="fade-up"
-          data-aos-delay={(i + 1) * 100}
-          data-aos-offset={100}
-        >
+        <div key={v4()} className="col-12 col-md-6" data-aos="fade-up">
           <SolutionCard data={card} />
         </div>
       ))}
-    </Slider>
+    </div>
   );
 };
 
-export default SolutionsCardList;
+export default CardsList;
 
 const cards: ISolutionCardData[] = [
   {

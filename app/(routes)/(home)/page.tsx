@@ -1,7 +1,7 @@
 "use client";
 import AboutUs from "./_aboutUs";
 import HeroSlider from "./_heroSlider";
-import LetsConnect from "./_letsConnect";
+import LetsConnect from "../../_components/_common/LetsConnect";
 import SolutionsCardList from "./_solutionsCardList";
 import Vendors from "./_vendors";
 

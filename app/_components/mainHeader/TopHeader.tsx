@@ -1,5 +1,4 @@
-import React from "react";
-import { RiFacebookFill, RiLinkedinFill } from "react-icons/ri";
+import { FaRegClock } from "react-icons/fa";
 
 const TopHeader = () => {
   return (
@@ -11,10 +10,7 @@ const TopHeader = () => {
 
       <div className="topHeader-group gap-2">
         <p>
-          <RiFacebookFill />
-        </p>
-        <p>
-          <RiLinkedinFill />
+          <FaRegClock /> Sunday - Friday 09:00AM - 05:00PM
         </p>
       </div>
     </div>

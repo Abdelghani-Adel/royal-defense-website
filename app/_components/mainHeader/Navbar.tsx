@@ -17,37 +17,43 @@ const Navbar = () => {
 
         <li className={`navItem ${pathname === "/about" ? "active" : ""}`}>
           <Link className="navLink" aria-current="page" href="/">
-            About
-          </Link>
-        </li>
-
-        <li className={`navItem ${pathname === "/industries" ? "active" : ""}`}>
-          <Link className="navLink" aria-current="page" href="/">
-            Industries
+            About Us
           </Link>
         </li>
 
         <li className={`navItem ${pathname === "/solutions" ? "active" : ""}`}>
           <Link className="navLink" aria-current="page" href="/">
-            Solutions & Technologies
+            Solutions
           </Link>
         </li>
 
-        <li className={`navItem ${pathname === "/services" ? "active" : ""}`}>
+        <li className={`navItem ${pathname === "/solutions" ? "active" : ""}`}>
           <Link className="navLink" aria-current="page" href="/">
-            Services & support
+            Software
           </Link>
         </li>
 
-        <li className={`navItem ${pathname === "/partners" ? "active" : ""}`}>
+        <li className={`navItem ${pathname === "/solutions" ? "active" : ""}`}>
           <Link className="navLink" aria-current="page" href="/">
-            Partners
+            Services
+          </Link>
+        </li>
+
+        <li className={`navItem ${pathname === "/solutions" ? "active" : ""}`}>
+          <Link className="navLink" aria-current="page" href="/">
+            E-Catalogue
           </Link>
         </li>
 
         <li className={`navItem ${pathname === "/contact" ? "active" : ""}`}>
           <Link className="navLink" aria-current="page" href="/">
-            Contact
+            Careers
+          </Link>
+        </li>
+
+        <li className={`navItem ${pathname === "/contact" ? "active" : ""}`}>
+          <Link className="navLink" aria-current="page" href="/">
+            Contact Us
           </Link>
         </li>
       </ul>

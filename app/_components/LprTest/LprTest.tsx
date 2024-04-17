@@ -5,17 +5,22 @@ import PreviewBox from "./PreviewBox";
 import ResultBox from "./ResultBox";
 import "react-circular-progressbar/dist/styles.css";
 import "./LprTest.css";
+import LprContent from "./LprContent";
 
 const LprTest = () => {
   const [result, setResult] = useState<ILprTestRes>(defaultResult);
   const [uploadedImage, setUploadedImage] = useState<File>();
 
   return (
-    <div className="testOurApi_wrapper">
-      <UploadBox updateResult={setResult} updateImage={setUploadedImage} />
-      <PreviewBox result={result} uploadedImage={uploadedImage} />
-      <ResultBox result={result} />
-    </div>
+    <>
+      <div className="testOurApi_wrapper">
+        <UploadBox updateResult={setResult} updateImage={setUploadedImage} />
+        <PreviewBox result={result} uploadedImage={uploadedImage} />
+        <ResultBox result={result} />
+      </div>
+
+      <LprContent />
+    </>
   );
 };
 
