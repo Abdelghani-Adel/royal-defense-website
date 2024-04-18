@@ -126,32 +126,29 @@
   position: relative;
 }
 
-.scrollableContent {
-  height: 80vh;
-  position: relative;
+.lprContentCaptions {
+  height: 50vh;
   display: flex;
-  /* align-items: center; */
-  gap: 10vw;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  color: rgb(167, 166, 166);
+  transition: 0.5s ease-in-out;
 }
 
-.scrollableContent .captions {
-  width: 40%;
-  color: rgb(167, 166, 166);
-  transition: 0.3s ease-in-out;
+.lprContentCaptions.active {
+  color: #000;
 }
 
 .lprContent_image {
   position: relative;
-  height: 100%;
-  width: 60%;
-  opacity: 0;
-  transition: 0.5s ease-in-out;
+  height: 60vh;
+  width: 40vw;
+  margin-left: auto;
+  transition: 1s ease-in-out;
 }
 
-.scrollableContent.active .captions {
-  color: #000;
-}
-
-.scrollableContent.active .lprContent_image {
-  opacity: 1;
+.lprContent.active .lprContent_image {
+  position: sticky;
+  top: 20vh;
 }

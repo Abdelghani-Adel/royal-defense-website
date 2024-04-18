@@ -1,23 +1,23 @@
 import useOnScreen from "@/app/_hooks/useOnScreen";
-import Image from "next/image";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
-const ScrollableContent = (props: IScrollableContentProps) => {
+const LprContentCaptions = (props: IScrollableContentProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const isVisible = useOnScreen(ref);
 
+  useEffect(() => {
+    if (isVisible) {
+      props.onActive(props.data.image);
+    }
+  }, [isVisible]);
+
   return (
-    <div ref={ref} className={`scrollableContent ${isVisible ? "active" : ""}`}>
-      <div className="captions">
-        <h1>{props.data.title}</h1>
-        <h3>{props.data.smallTitle}</h3>
-        <p>{props.data.description}</p>
-      </div>
-      <div className="lprContent_image">
-        <Image fill src={props.data.image} alt="" />
-      </div>
+    <div ref={ref} className={`lprContentCaptions ${isVisible ? "active" : ""}`}>
+      <h1>{props.data.title}</h1>
+      <h3>{props.data.smallTitle}</h3>
+      <p>{props.data.description}</p>
     </div>
   );
 };
 
-export default ScrollableContent;
+export default LprContentCaptions;

@@ -9,16 +9,16 @@ export default function useOnScreen(ref: RefObject<HTMLElement>) {
       if (!element) return;
 
       const viewportHeight = window.innerHeight;
-      const topThreshold = viewportHeight * 0.8; // Top 30% of viewport
+      const topThreshold = viewportHeight * 0.1;
+      const bottomThreshold = viewportHeight * 0.6;
 
       const boundingClientRect = element.getBoundingClientRect();
       const elementTop = boundingClientRect.top;
-      const elementBottom = boundingClientRect.bottom;
 
-      const isInTop30Percent =
-        elementTop >= 0 && elementTop < topThreshold && elementBottom > 0;
+      // Calculate if the top edge of the element is within the middle 50% of the viewport
+      const isInMiddle50Percent = elementTop > topThreshold && elementTop < bottomThreshold;
 
-      setIntersecting(isInTop30Percent);
+      setIntersecting(isInMiddle50Percent);
     };
 
     handleScroll(); // Check initially
