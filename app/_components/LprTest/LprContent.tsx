@@ -36,6 +36,7 @@ const LprContent = () => {
 
   return (
     <div className={`lprContent ${isActive ? "active" : ""}`} ref={elementRef}>
+      <h1 className="fw-bold display-2 w-50">Advanced LPR in any situation</h1>
       <div className="row">
         <div className="col-md-5">
           {content.map((content) => (
