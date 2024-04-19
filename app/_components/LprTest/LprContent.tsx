@@ -62,7 +62,7 @@ const content = [
     title: "Blurry Image Recognition",
     description:
       "Effortlessly handle blurry images, ensuring precise recognition even when image quality is compromised.",
-    image: "/images/lprcontent/blurydetection.png",
+    image: "/images/lprcontent/blury.png",
   },
   {
     smallTitle: "Efficiency in Limited Quality​",
@@ -85,24 +85,17 @@ const content = [
     image: "/images/lprcontent/lowlight.png",
   },
   {
-    smallTitle: "Adaptable to Varied Layouts​",
-    title: "Dual Row Plate Recognition",
-    description:
-      "Accurately recognizes license plates displayed in two rows and caters to diverse plate layouts",
-    image: "/images/lprcontent/angle.png",
-  },
-  {
     smallTitle: "Accurate at Any Plate Position​​",
     title: "Angle-Defying Recognition​",
     description:
       "Defies plate orientation challenges, delivering accurate recognition even when plates are at odd angles.",
-    image: "/images/lprcontent/blurydetection.png",
+    image: "/images/lprcontent/angle.png",
   },
   {
     smallTitle: "Seamless Handling in High-Traffic Areas​",
     title: "Multi Vehicle Detection",
     description:
       "Efficiently identifies and distinguishes license plates in high-traffic scenarios",
-    image: "/images/lprcontent/angle.png",
+    image: "/images/lprcontent/multi.png",
   },
 ];
