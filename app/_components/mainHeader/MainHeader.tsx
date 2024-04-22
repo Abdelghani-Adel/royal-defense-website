@@ -1,10 +1,10 @@
-import React from "react";
-import TopHeader from "./TopHeader";
+"use client";
 import BottomHeader from "./BottomHeader";
+import TopHeader from "./TopHeader";
 
 const MainHeader = () => {
   return (
-    <div>
+    <div className="mainHeader">
       <TopHeader />
       <BottomHeader />
     </div>

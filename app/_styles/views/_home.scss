@@ -6,7 +6,7 @@
 
 .heroSlider_captions {
   position: absolute;
-  width: 600px;
+  width: clamp(200px, 80%, 500px);
   left: 10%;
   top: 50%;
   transform: translateY(-50%);
@@ -19,7 +19,7 @@
 
 .heroSlider_captions h1 {
   font-weight: bolder;
-  font-size: 3.5rem;
+  font-size: clamp(10px, 0.8rem + 5vw, 50px);
 }
 
 .heroSlider_btn {
@@ -38,7 +38,7 @@
 
 .heroSlider_slice {
   position: relative;
-  height: 90vh;
+  height: clamp(250px, 25rem + 10vw, 90vh);
 }
 
 .heroSlider_slice::after {
@@ -48,11 +48,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    rgba(25, 5, 68, 1) 0%,
-    rgba(96, 64, 255, 0) 100%
-  );
+  background: linear-gradient(90deg, rgba(25, 5, 68, 1) 0%, rgba(96, 64, 255, 0) 100%);
   z-index: 2;
 }
 
@@ -65,8 +61,7 @@
   border-radius: 10px;
   width: max-content;
   height: max-content;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   margin: auto;
 }
 

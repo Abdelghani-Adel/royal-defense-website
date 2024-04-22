@@ -7,9 +7,9 @@ const MainFooter = () => {
   return (
     <div className="mainFooter">
       <div className="container-fluid">
-        <div className="row">
+        <div className="row g-4">
           <div className="col-12 col-md-2 position-relative">
-            <div className="footer_iconWrapper">
+            <div className="d-none d-md-block footer_iconWrapper">
               <Image src="/images/logo.png" fill alt="" />
             </div>
           </div>
@@ -57,9 +57,7 @@ const MainFooter = () => {
               <HiOutlineMail className="display-2" />
               <div>
                 <h5>Subscribe to our news letter</h5>
-                <p className="fw-light">
-                  Sign up and we Will send the Lest deals to you
-                </p>
+                <p className="fw-light">Sign up and we Will send the Lest deals to you</p>
               </div>
             </div>
 

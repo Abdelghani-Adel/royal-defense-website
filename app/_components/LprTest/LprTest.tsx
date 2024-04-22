@@ -6,13 +6,19 @@ import ResultBox from "./ResultBox";
 import "react-circular-progressbar/dist/styles.css";
 import "./LprTest.css";
 import LprContent from "./LprContent";
+import MyModal from "../_common/MyModal";
 
 const LprTest = () => {
+  const [isModalShown, setIsModalShown] = useState(true);
   const [result, setResult] = useState<ILprTestRes>(defaultResult);
   const [uploadedImage, setUploadedImage] = useState<File>();
 
   return (
     <>
+      <MyModal show={isModalShown} onClose={() => setIsModalShown(false)}>
+        <UploadBox updateResult={setResult} updateImage={setUploadedImage} />
+      </MyModal>
+
       <div className="testOurApi_wrapper">
         <UploadBox updateResult={setResult} updateImage={setUploadedImage} />
         <PreviewBox result={result} uploadedImage={uploadedImage} />
