@@ -1,28 +1,89 @@
-import React, { useEffect, useState } from "react";
+"use client";
+import { useState } from "react";
 
-import UploadBox from "./UploadBox/UploadBox";
-import PreviewBox from "./PreviewBox";
-import ResultBox from "./ResultBox";
 import "react-circular-progressbar/dist/styles.css";
-import "./LprTest.css";
-import LprContent from "./LprContent";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import MyModal from "../_common/MyModal";
+import LprContent from "./LprContent";
+import "./LprTest.css";
+import PreviewBox from "./PreviewBox";
+import RegisterForm from "./RegisterForm";
+import ResultBox from "./ResultBox";
+import UploadBox from "./UploadBox";
 
 const LprTest = () => {
+  const [registration, setRegistration] = useState<ILprRegisterForm>({
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+  });
+
   const [isModalShown, setIsModalShown] = useState(true);
   const [result, setResult] = useState<ILprTestRes>(defaultResult);
   const [uploadedImage, setUploadedImage] = useState<File>();
 
+  const updateRegistration = (form: ILprRegisterForm) => {
+    setIsModalShown(false);
+    setRegistration(form);
+  };
+
+  const submitHandler = async () => {
+    const formData = new FormData();
+    formData.append("name", registration.name || "");
+    formData.append("email", registration.email || "");
+    formData.append("phone", registration.phone || "");
+    formData.append("image", uploadedImage || "");
+
+    try {
+      const response = await fetch("https://lpr.royal-defense.cloud/api/v1/lpr", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.status === 429) {
+        toast.info("You have exceeded your trials limit, Please contact our sales team!");
+        return;
+      }
+
+      if (response.status === 500) {
+        toast.info("We are making some enhancements on our side, please try again later!");
+        return;
+      }
+
+      if (response.status === 200) {
+        const result: ILprTestRes = await response.json();
+        if (result.data && result.success) {
+          setResult(result);
+        }
+        return;
+      }
+
+      toast.info("Something went wrong!");
+    } catch (e) {
+      toast.info("We are making some enhancements on our side, please try again later!");
+    }
+  };
+
   return (
     <>
-      <MyModal show={isModalShown} onClose={() => setIsModalShown(false)}>
-        <UploadBox updateResult={setResult} updateImage={setUploadedImage} />
+      <MyModal show={isModalShown} onClose={() => {}}>
+        <RegisterForm updateForm={updateRegistration} />
       </MyModal>
 
-      <div className="testOurApi_wrapper">
-        <UploadBox updateResult={setResult} updateImage={setUploadedImage} />
-        <PreviewBox result={result} uploadedImage={uploadedImage} />
-        <ResultBox result={result} />
+      <div className="row g-3 align-items-end">
+        <div className="col-12 col-md-6 col-lg-4">
+          <UploadBox submitHandler={submitHandler} uploadImage={setUploadedImage} />
+        </div>
+
+        <div className="col-12 col-md-6 col-lg-4">
+          <PreviewBox result={result} uploadedImage={uploadedImage} />
+        </div>
+
+        <div className="col-12 col-lg-4">
+          <ResultBox result={result} />
+        </div>
       </div>
 
       <LprContent />

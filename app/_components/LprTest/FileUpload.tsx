@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDropzone } from "react-dropzone";
 import { RxUpload } from "react-icons/rx";
-import UploadBox from "./UploadBox/UploadBox";
 
 type Props = {
   setUploadedImage: (files: File) => void;

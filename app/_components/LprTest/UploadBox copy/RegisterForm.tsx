@@ -38,26 +38,19 @@ const UploadBox = (props: Props) => {
     }
 
     try {
-      const response = await fetch(
-        "https://lpr.royal-defense.cloud/api/v1/lpr",
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
+      const response = await fetch("https://lpr.royal-defense.cloud/api/v1/lpr", {
+        method: "POST",
+        body: formData,
+      });
 
       if (response.status === 429) {
-        toast.info(
-          "You have exceeded your trials limit, Please contact our sales team!"
-        );
+        toast.info("You have exceeded your trials limit, Please contact our sales team!");
         setButtonState("idle");
         return;
       }
 
       if (response.status === 500) {
-        toast.info(
-          "We are making some enhancements on our side, please try again later!"
-        );
+        toast.info("We are making some enhancements on our side, please try again later!");
         setButtonState("idle");
         return;
       }
@@ -74,9 +67,7 @@ const UploadBox = (props: Props) => {
       toast.info("Something went wrong!");
       setButtonState("idle");
     } catch (e) {
-      toast.info(
-        "We are making some enhancements on our side, please try again later!"
-      );
+      toast.info("We are making some enhancements on our side, please try again later!");
       setButtonState("idle");
     }
   };
@@ -84,7 +75,6 @@ const UploadBox = (props: Props) => {
   return (
     <form className="uploadBox" onSubmit={submitHandler}>
       <Titles />
-      <FileUpload setUploadedImage={imageChangeHandler} />
       <ContactInfo onChange={setContacts} />
       <SubmitBtn buttonState={buttonState} />
     </form>

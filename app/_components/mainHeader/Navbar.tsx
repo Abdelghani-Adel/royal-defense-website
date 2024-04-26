@@ -15,44 +15,38 @@ const Navbar = () => {
           </Link>
         </li>
 
-        <li className={`navItem ${pathname === "/about" ? "active" : ""}`}>
-          <Link className="navLink" aria-current="page" href="/">
-            About Us
-          </Link>
-        </li>
-
         <li className={`navItem ${pathname === "/solutions" ? "active" : ""}`}>
-          <Link className="navLink" aria-current="page" href="/">
+          <Link className="navLink" aria-current="page" href="/solutions">
             Solutions
           </Link>
         </li>
 
-        <li className={`navItem ${pathname === "/solutions" ? "active" : ""}`}>
+        {/* <li className={`navItem ${pathname === "/solutions" ? "active" : ""}`}>
           <Link className="navLink" aria-current="page" href="/">
             Software
           </Link>
-        </li>
+        </li> */}
 
-        <li className={`navItem ${pathname === "/solutions" ? "active" : ""}`}>
-          <Link className="navLink" aria-current="page" href="/">
+        <li className={`navItem ${pathname === "/services" ? "active" : ""}`}>
+          <Link className="navLink" aria-current="page" href="/services">
             Services
           </Link>
         </li>
 
-        <li className={`navItem ${pathname === "/solutions" ? "active" : ""}`}>
-          <Link className="navLink" aria-current="page" href="/">
+        <li className={`navItem ${pathname === "/catalogue" ? "active" : ""}`}>
+          <Link className="navLink" aria-current="page" href="/catalogue">
             E-Catalogue
           </Link>
         </li>
 
-        <li className={`navItem ${pathname === "/contact" ? "active" : ""}`}>
-          <Link className="navLink" aria-current="page" href="/">
-            Careers
+        <li className={`navItem ${pathname === "/about-us" ? "active" : ""}`}>
+          <Link className="navLink" aria-current="page" href="/about-us">
+            About Us
           </Link>
         </li>
 
         <li className={`navItem ${pathname === "/contact" ? "active" : ""}`}>
-          <Link className="navLink" aria-current="page" href="/">
+          <Link className="navLink" aria-current="page" href="/contact">
             Contact Us
           </Link>
         </li>

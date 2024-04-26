@@ -31,9 +31,9 @@ const PreviewBox = (props: Props) => {
   }, [uploadedImage]);
 
   return (
-    <div className="previewBox">
-      <h2>Preview your image</h2>
-      <div className="imageWrapper">
+    <div>
+      <h2 className="mb-2">Preview your image</h2>
+      <div className="lprBigImage">
         <Image src={imgSrc} fill alt="" />
       </div>
     </div>

@@ -1,9 +1,31 @@
-.testOurApi_wrapper {
+.registerForm {
+  background-color: #000;
+  padding: 1.5rem;
+  border-radius: 10px;
   display: flex;
-  gap: 3rem;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 15px;
+  width: clamp(400px, 60vw, 500px);
+}
+
+.registerBtn {
+  width: 100%;
+  border: none;
   padding: 10px;
-  align-items: end;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.registerBtn:disabled {
+  background-color: gray;
+  color: rgb(196, 196, 196);
+  cursor: not-allowed;
+}
+
+.registerBtn:not(:disabled) {
+  background-color: rgb(0, 0, 161);
+  color: #fff;
 }
 
 .uploadBox {
@@ -47,31 +69,19 @@
   background-color: rgb(0, 0, 161);
 }
 
-.uploadBtn.loading {
-  background-color: rgba(54, 54, 151, 0.548);
-  pointer-events: none;
-  position: relative;
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  justify-content: center;
-  animation: opacity 2.5s linear infinite;
+.uploadBtn:disabled {
+  background-color: gray;
+  color: rgb(196, 196, 196);
+  cursor: not-allowed;
 }
 
-.uploadBtn.loading .loadingIcon {
-  animation: spin 1s linear infinite;
-}
-
-.previewBox {
-  color: #000;
-}
-
-.previewBox .imageWrapper {
+.lprBigImage {
   position: relative;
   height: 300px;
-  width: 300px;
+  width: clmap(300px, 100%, 500px);
   border-radius: 10px;
   overflow: hidden;
+  border: 1px solid;
 }
 
 .resultBox {

@@ -27,3 +27,12 @@ type IScrollableContentProps = {
   };
   onActive: (image: string) => void;
 };
+
+type ILprRegisterForm = {
+  name: null | string;
+  email: null | string;
+  phone: null | string;
+  company: null | string;
+};
+
+type ILprRegisterKey = "name" | "email" | "phone" | "company";
