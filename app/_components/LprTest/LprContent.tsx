@@ -44,7 +44,7 @@ const LprContent = () => {
           ))}
         </div>
 
-        <div className="col-md-7">
+        <div className="d-none d-md-block col-md-7">
           <div className="lprContent_image">
             <Image fill src={image} alt="" data-aos="fade" />
           </div>

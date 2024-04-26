@@ -21,7 +21,16 @@ const Providers = ({ children }: Readonly<{ children: React.ReactNode }>) => {
       duration: 600,
       easing: "ease-in-out",
     });
-  }, []);
+
+    // Imoprt the bootstrap js files
+    if (typeof document !== "undefined") {
+      //@ts-ignore
+      import("jquery");
+      import("popper.js");
+      //@ts-ignore
+      import("bootstrap/dist/js/bootstrap.bundle.min");
+    }
+  });
   return <>{children}</>;
 };
 

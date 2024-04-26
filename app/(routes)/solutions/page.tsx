@@ -1,7 +1,7 @@
 import LetsConnect from "@/app/_components/_common/LetsConnect";
 import PageStripe from "@/app/_components/_common/PageStripe";
 import React from "react";
-import CardsList from "./_cardsList";
+import SolutionsCardList from "./_solutionsCardList";
 
 const Page = () => {
   return (
@@ -9,9 +9,8 @@ const Page = () => {
       <PageStripe title="Solutions" />
       <div className="container">
         <div className="mb-3">
-          <CardsList />
+          <SolutionsCardList />
         </div>
-        <LetsConnect />
       </div>
     </div>
   );

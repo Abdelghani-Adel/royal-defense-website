@@ -27,7 +27,7 @@ const Navbar = () => {
           </Link>
         </li> */}
 
-        <li className={`navItem ${pathname === "/services" ? "active" : ""}`}>
+        {/* <li className={`navItem ${pathname === "/services" ? "active" : ""}`}>
           <Link className="navLink" aria-current="page" href="/services">
             Services
           </Link>
@@ -37,7 +37,7 @@ const Navbar = () => {
           <Link className="navLink" aria-current="page" href="/catalogue">
             E-Catalogue
           </Link>
-        </li>
+        </li> */}
 
         <li className={`navItem ${pathname === "/about-us" ? "active" : ""}`}>
           <Link className="navLink" aria-current="page" href="/about-us">
