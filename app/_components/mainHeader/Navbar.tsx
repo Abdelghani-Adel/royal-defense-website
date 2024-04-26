@@ -7,7 +7,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="navigation">
+    <nav>
       <ul className="navList">
         <li className={`navItem ${pathname === "/" ? "active" : ""}`}>
           <Link className="navLink" aria-current="page" href="/">

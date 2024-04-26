@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import BtnMenuCloseX from "../ui/BtnMenuCloseX";
+import Logo from "./Logo";
 
 type props = {
   isShown: boolean;
@@ -9,11 +10,11 @@ type props = {
 
 const MobileMenu = (props: props) => {
   const { isShown, closeMenu } = props;
+
   return (
     <div className={`mobileMenu ${isShown ? "shown" : ""}`}>
       <div className="mobileMenu_header">
-        {/* <Logo /> */}
-        <h6>logo</h6>
+        <Logo />
         <BtnMenuCloseX onClick={closeMenu} />
       </div>
 

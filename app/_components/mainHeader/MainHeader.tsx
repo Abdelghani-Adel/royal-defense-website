@@ -4,7 +4,7 @@ import TopHeader from "./TopHeader";
 
 const MainHeader = () => {
   return (
-    <div className="mainHeader">
+    <div>
       <TopHeader />
       <BottomHeader />
     </div>
