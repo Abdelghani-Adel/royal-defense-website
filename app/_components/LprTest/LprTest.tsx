@@ -20,7 +20,7 @@ const LprTest = () => {
     company: "",
   });
 
-  const [isModalShown, setIsModalShown] = useState(true);
+  const [isModalShown, setIsModalShown] = useState(false);
   const [result, setResult] = useState<ILprTestRes>(defaultResult);
   const [uploadedImage, setUploadedImage] = useState<File>();
 
@@ -37,18 +37,25 @@ const LprTest = () => {
     formData.append("image", uploadedImage || "");
 
     try {
-      const response = await fetch("https://lpr.royal-defense.cloud/api/v1/lpr", {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch(
+        "https://lpr.royal-defense.cloud/api/v1/lpr",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       if (response.status === 429) {
-        toast.info("You have exceeded your trials limit, Please contact our sales team!");
+        toast.info(
+          "You have exceeded your trials limit, Please contact our sales team!"
+        );
         return;
       }
 
       if (response.status === 500) {
-        toast.info("We are making some enhancements on our side, please try again later!");
+        toast.info(
+          "We are making some enhancements on our side, please try again later!"
+        );
         return;
       }
 
@@ -62,7 +69,9 @@ const LprTest = () => {
 
       toast.info("Something went wrong!");
     } catch (e) {
-      toast.info("We are making some enhancements on our side, please try again later!");
+      toast.info(
+        "We are making some enhancements on our side, please try again later!"
+      );
     }
   };
 
@@ -72,9 +81,20 @@ const LprTest = () => {
         <RegisterForm updateForm={updateRegistration} />
       </MyModal>
 
+      <p className="mt-4 mb-4 fw-normal">
+        Maximize the potential of LPR technology and gain unparalleled
+        operational advantages. Experience the cutting-edge solutions we offer,
+        which allow you to streamline traffic flow, optimize parking management,
+        and eliminate manual errors. Our system seamlessly integrates with your
+        existing infrastructure, ensuring a hassle-free installation process.
+      </p>
+
       <div className="row g-3 align-items-end">
         <div className="col-12 col-md-6 col-lg-4">
-          <UploadBox submitHandler={submitHandler} uploadImage={setUploadedImage} />
+          <UploadBox
+            submitHandler={submitHandler}
+            uploadImage={setUploadedImage}
+          />
         </div>
 
         <div className="col-12 col-md-6 col-lg-4">

@@ -13,7 +13,7 @@ const ResultDetection = (props: Props) => {
   return (
     <div className="d-flex flex-column gap-2">
       <p className="m-0">
-        <strong>Plate Number: </strong> '<span>{detect?.plate_number}</span>'
+        <strong>Plate Number: </strong> <span>{detect?.plate_number}</span>
       </p>
       <Image
         src={`${imagePath}${detect.plate_image}`}

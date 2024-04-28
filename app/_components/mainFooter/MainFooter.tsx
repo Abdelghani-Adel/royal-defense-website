@@ -1,9 +1,15 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 import { HiOutlineMail } from "react-icons/hi";
 
 const MainFooter = () => {
+  const pathname = usePathname();
+
+  if (pathname == "/lpr-test") return null;
+
   return (
     <div className="mainFooter">
       <div className="container-fluid">
@@ -57,7 +63,9 @@ const MainFooter = () => {
               <HiOutlineMail className="display-2" />
               <div>
                 <h5>Subscribe to our news letter</h5>
-                <p className="fw-light">Sign up and we Will send the Lest deals to you</p>
+                <p className="fw-light">
+                  Sign up and we Will send the Lest deals to you
+                </p>
               </div>
             </div>
 

@@ -5,7 +5,9 @@ const HeaderActions = () => {
   return (
     <div className="headerActions">
       <button className="action">
-        <Link href="/lpr-test">Test Our API</Link>{" "}
+        <Link href="/lpr-test" target="_blank">
+          Test Our API
+        </Link>{" "}
       </button>
     </div>
   );
