@@ -1,14 +1,14 @@
 import PageStripe from "@/app/_components/_common/PageStripe";
 import React from "react";
-import SolutionsCardList from "./_solutionsCardList";
+import SoftwareCardsList from "./_softwareCardsList";
 
 const Page = () => {
   return (
     <div className="pb-5">
-      <PageStripe title="Solutions" />
+      <PageStripe title="Software Solutions" />
       <div className="container">
         <div className="mb-3">
-          <SolutionsCardList />
+          <SoftwareCardsList />
         </div>
       </div>
     </div>

@@ -3,6 +3,28 @@
 // ============================================== //
 // rdBtn
 // ============================================== //
+.RDCard {
+  background-color: #fff;
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.RDCard_image {
+  position: relative;
+  height: 5rem;
+  aspect-ratio: 1;
+  margin: auto;
+}
+
+// ============================================== //
+// rdBtn
+// ============================================== //
 .rdBtn {
   min-height: 50px;
   line-height: 50px;

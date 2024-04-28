@@ -1,12 +1,12 @@
 import React from "react";
 import Slider from "react-slick";
-import SolutionCard from "./_solutionCard";
 import { v4 } from "uuid";
 import solutions from "@/public/data/solutions.json";
+import RDCard from "@/app/_components/_common/RDCard";
 
 const settings = {
   dots: false,
-  // autoplay: true,
+  autoplay: true,
   autoplaySpeed: 10000,
   infinite: true,
   slidesToShow: 3,
@@ -39,7 +39,7 @@ const SolutionsCardList = () => {
           data-aos-delay={(i + 1) * 100}
           data-aos-offset={100}
         >
-          <SolutionCard data={card} />
+          <RDCard data={card} />
         </div>
       ))}
     </Slider>

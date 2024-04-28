@@ -48,7 +48,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, rgba(25, 5, 68, 1) 0%, rgba(96, 64, 255, 0) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(25, 5, 68, 1) 0%,
+    rgba(96, 64, 255, 0) 100%
+  );
   z-index: 2;
 }
 
@@ -61,7 +65,8 @@
   border-radius: 10px;
   width: max-content;
   height: max-content;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   margin: auto;
 }
 
@@ -87,23 +92,4 @@
   flex-direction: column;
   gap: 20px;
   align-items: start;
-}
-
-.solutionCard {
-  background-color: #fff;
-  width: 80%;
-  margin: auto;
-  padding: 10px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
-}
-
-.solutionCard_image {
-  position: relative;
-  height: 5rem;
-  aspect-ratio: 1;
-  margin: auto;
 }

@@ -1,13 +1,12 @@
-"use client";
 import React from "react";
 import Slider from "react-slick";
 import { v4 } from "uuid";
-import solutions from "@/public/data/solutions.json";
+import software from "@/public/data/software.json";
 import RDCard from "@/app/_components/_common/RDCard";
 
 const settings = {
   dots: false,
-  // autoplay: true,
+  autoplay: true,
   autoplaySpeed: 10000,
   infinite: true,
   slidesToShow: 3,
@@ -30,16 +29,21 @@ const settings = {
   ],
 };
 
-const SolutionsCardList = () => {
+const SoftwareCardsList = () => {
   return (
-    <div className="row g-4">
-      {solutions.map((card, i) => (
-        <div key={v4()} className="col-12 col-md-4">
+    <Slider {...settings}>
+      {software.map((card, i) => (
+        <div
+          key={v4()}
+          data-aos="fade-up"
+          data-aos-delay={(i + 1) * 100}
+          data-aos-offset={100}
+        >
           <RDCard data={card} />
         </div>
       ))}
-    </div>
+    </Slider>
   );
 };
 
-export default SolutionsCardList;
+export default SoftwareCardsList;

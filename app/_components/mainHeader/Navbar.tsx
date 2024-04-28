@@ -21,11 +21,11 @@ const Navbar = () => {
           </Link>
         </li>
 
-        {/* <li className={`navItem ${pathname === "/solutions" ? "active" : ""}`}>
-          <Link className="navLink" aria-current="page" href="/">
+        <li className={`navItem ${pathname === "/software" ? "active" : ""}`}>
+          <Link className="navLink" aria-current="page" href="/software">
             Software
           </Link>
-        </li> */}
+        </li>
 
         {/* <li className={`navItem ${pathname === "/services" ? "active" : ""}`}>
           <Link className="navLink" aria-current="page" href="/services">
