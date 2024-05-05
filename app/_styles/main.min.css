@@ -394,6 +394,25 @@ q:after {
   margin-top: auto;
 }
 
+.RDCard {
+  background-color: #fff;
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.RDCard_image {
+  position: relative;
+  height: 5rem;
+  aspect-ratio: 1;
+  margin: auto;
+}
+
 .rdBtn {
   min-height: 50px;
   line-height: 50px;
@@ -648,25 +667,6 @@ q:after {
   flex-direction: column;
   gap: 20px;
   align-items: start;
-}
-
-.solutionCard {
-  background-color: #fff;
-  width: 80%;
-  margin: auto;
-  padding: 10px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
-}
-
-.solutionCard_image {
-  position: relative;
-  height: 5rem;
-  aspect-ratio: 1;
-  margin: auto;
 }
 
 .aboutUs h2 {

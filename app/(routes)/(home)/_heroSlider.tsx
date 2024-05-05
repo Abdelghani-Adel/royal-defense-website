@@ -2,6 +2,9 @@ import Image from "next/image";
 import React from "react";
 import Slider from "react-slick";
 
+//@ts-ignore
+import Typewriter from "typewriter-effect";
+
 const settings = {
   dots: false,
   autoplay: true,
@@ -12,14 +15,23 @@ const settings = {
 };
 
 const HeroSlider = () => {
+  // new Typewriter("#typewriter", {
+  //   strings: ["Next-Level Solutions Powered by Cutting-Edge Technologies"],
+  //   autoStart: true,
+  //   skipAddStyles: true,
+  // });
+
   return (
     <div className="heroSlider_wrapper">
       <div className="heroSlider_captions">
-        <h1 data-aos="fade-up" data-aos-once>
-          <span className="text-white">Next-Level Solutions </span>{" "}
-          <span className="textPrimary">
-            Powered by Cutting-Edge Technologies
-          </span>
+        <h1 data-aos="fade-up" data-aos-once id="typewriter" className="text-white">
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter
+                .typeString("Next-Level Solutions Powered by Cutting-Edge Technologies.")
+                .start();
+            }}
+          />
         </h1>
         <p
           className="fw-normal"
@@ -29,9 +41,7 @@ const HeroSlider = () => {
           data-aos-offset={-150}
         >
           <span className="textPrimary fw-bold">Royal Defense </span>
-          <span className="text-white">
-            provides best-in-class security management solutions.
-          </span>
+          <span className="text-white">provides best-in-class security management solutions.</span>
         </p>
 
         <button

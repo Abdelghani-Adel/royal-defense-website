@@ -457,7 +457,6 @@ q:after {
 
 .rdBtn.mainBtn.smBtn,
 .rdBtn.secondBtn.smBtn {
-  min-height: -moz-max-content;
   min-height: max-content;
   line-height: normal;
   padding: 5px 10px;
@@ -518,8 +517,7 @@ q:after {
   transition: 0.3s ease-in-out;
   opacity: 0;
   background-color: rgba(4, 4, 4, 0.53);
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
 }
 
 .myModal.active {
@@ -641,9 +639,7 @@ q:after {
 .vendorSlice_inner {
   padding: 20px;
   border-radius: 10px;
-  width: -moz-max-content;
   width: max-content;
-  height: -moz-max-content;
   height: max-content;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   margin: auto;
@@ -681,4 +677,4 @@ q:after {
 .aboutUs p {
   font-weight: 300;
   margin-bottom: 0.5rem;
-}/*# sourceMappingURL=main.css.map */
+}
