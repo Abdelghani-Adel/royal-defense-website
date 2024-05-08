@@ -58,7 +58,7 @@ const MainFooter = () => {
             </ul>
           </div>
 
-          <div className="col-12 col-md-4">
+          {/* <div className="col-12 col-md-4">
             <div className="d-flex align-items-center gap-2 mb-3">
               <HiOutlineMail className="display-2" />
               <div>
@@ -77,7 +77,7 @@ const MainFooter = () => {
               ></input>
               <button className="rdBtn mainBtn smBtn">SUBSCRIBE</button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

@@ -1,3 +1,4 @@
+import MyCard from "@/app/_components/_common/MyCard";
 import Image from "next/image";
 import React from "react";
 

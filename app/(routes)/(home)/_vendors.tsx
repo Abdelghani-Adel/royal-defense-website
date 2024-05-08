@@ -45,7 +45,7 @@ const Vendors = () => {
         data-aos="fade-up"
         data-aos-offset={100}
       >
-        Our Vendor Partners
+        Our Key Clients
       </h2>
 
       <Slider {...settings} className="vendorCarousel">
