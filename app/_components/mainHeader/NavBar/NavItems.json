@@ -1,0 +1,53 @@
+[
+  {
+    "title": "home",
+    "path": "/",
+    "cName": ""
+  },
+  {
+    "title": "Solutions",
+    "path": "/solutions",
+    "cName": "nav-item",
+    "children": [
+      {
+        "title": "Technological",
+        "path": "/qaindex",
+        "cName": "",
+        "children": [
+          {
+            "title": "tech 1",
+            "path": "/",
+            "cName": ""
+          }
+        ]
+      },
+      {
+        "title": "Law Enforcement",
+        "path": "/finished_qa_jobs",
+        "cName": "",
+        "children": [
+          {
+            "title": "law 1",
+            "path": "/",
+            "cName": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Software",
+    "path": "/",
+    "cName": ""
+  },
+  {
+    "title": "About us",
+    "path": "/",
+    "cName": ""
+  },
+  {
+    "title": "Contact us",
+    "path": "/",
+    "cName": ""
+  }
+]

@@ -2,6 +2,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
+import { FaArrowDown } from "react-icons/fa6";
+import SolutionsDropdown from "./SolutionsDropdown";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -15,11 +17,13 @@ const Navbar = () => {
           </Link>
         </li>
 
-        <li className={`navItem ${pathname === "/solutions" ? "active" : ""}`}>
+        <SolutionsDropdown />
+
+        {/* <li className={`navItem ${pathname === "/solutions" ? "active" : ""}`}>
           <Link className="navLink" aria-current="page" href="/solutions">
             Solutions
           </Link>
-        </li>
+        </li> */}
 
         <li className={`navItem ${pathname === "/software" ? "active" : ""}`}>
           <Link className="navLink" aria-current="page" href="/software">
