@@ -34,19 +34,17 @@ const SolutionsCardList = () => {
   return (
     <Slider {...settings}>
       {solutions.map((card, i) => (
-        <div
-          key={v4()}
-          data-aos="fade-up"
-          data-aos-delay={(i + 1) * 100}
-          data-aos-offset={100}
-        >
+        <div key={v4()} data-aos="fade-up" data-aos-delay={(i + 1) * 100} data-aos-offset={100}>
           {/* <RDCard data={card} /> */}
-          <MyCard
-            title={card.title}
-            image={card.img}
-            text={card.desc}
-            urlTarget={card.urlTarget}
-          />
+          <div className="py-4">
+            {" "}
+            <MyCard
+              title={card.title}
+              image={card.img}
+              text={card.desc}
+              urlTarget={card.urlTarget}
+            />
+          </div>
         </div>
       ))}
     </Slider>

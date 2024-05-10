@@ -20,11 +20,11 @@ const MobileMenu = (props: props) => {
         <BtnMenuCloseX onClick={closeMenu} />
       </div>
 
-      {/* <div onClick={closeMenu}>
+      <div onClick={closeMenu}>
         <Navbar />
-      </div> */}
+      </div>
 
-      <NavBar />
+      {/* <NavBar /> */}
 
       <div className="mobileMenu_footer" onClick={closeMenu}>
         <HeaderActions />

@@ -23,28 +23,9 @@ export default function Home() {
         </section>
       </div>
 
-      {/* <div className="section">
+      <div className="section solutionsSection">
         <div className="container">
-          <h2
-            className="text-center mb-4"
-            data-aos="fade-up"
-            data-aos-offset={100}
-          >
-            Software Solutions
-          </h2>
-          <div className="row g-5">
-            <Software />
-          </div>
-        </div>
-      </div> */}
-
-      <div className="section bgPrimary solutionsSection">
-        <div className="container">
-          <h1
-            className="text-center text-white mb-4"
-            data-aos="fade-up"
-            data-aos-offset={100}
-          >
+          <h1 className="text-center mb-4" data-aos="fade-up" data-aos-offset={100}>
             Solutions & Technologies
           </h1>
           <SolutionsCardList />
@@ -53,16 +34,23 @@ export default function Home() {
 
       <div className="section">
         <div className="container">
-          <h1
-            className="text-center mb-4"
-            data-aos="fade-up"
-            data-aos-offset={100}
-          >
+          <h2 className="text-center mb-4" data-aos="fade-up" data-aos-offset={100}>
+            Software Solutions
+          </h2>
+          <div className="row g-5">
+            <Software />
+          </div>
+        </div>
+      </div>
+
+      {/* <div className="section">
+        <div className="container">
+          <h1 className="text-center mb-4" data-aos="fade-up" data-aos-offset={100}>
             Software Solutions
           </h1>
           <SoftwareCardsList />
         </div>
-      </div>
+      </div> */}
 
       <div className="section">
         <div className="container">
@@ -78,9 +66,7 @@ export default function Home() {
                 <HiOutlineMail className="display-2" />
                 <div>
                   <h5>Subscribe to our news letter</h5>
-                  <p className="fw-light">
-                    Sign up and we Will send the Lest deals to you
-                  </p>
+                  <p className="fw-light">Sign up and we Will send the Lest deals to you</p>
                 </div>
               </div>
 

@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import { v4 } from "uuid";
 import solutions from "@/public/data/solutions.json";
 import RDCard from "@/app/_components/_common/RDCard";
+import Image from "next/image";
 
 const settings = {
   dots: false,
@@ -31,15 +32,20 @@ const settings = {
 };
 
 const SolutionsCardList = () => {
-  return (
-    <div className="row g-4">
-      {solutions.map((card, i) => (
-        <div key={v4()} className="col-12 col-md-4">
-          <RDCard data={card} />
+  return solutions.map((card, i) => (
+    <div className={`solutionCard ${i % 2 != 0 ? "bg" : ""}`} key={v4()}>
+      <div>
+        <h2 className="mb-3">{card.title}</h2>
+        <p className="fw-light">{card.desc}</p>
+      </div>
+
+      <div>
+        <div className="solutionCard_img">
+          <Image src={card.img} fill alt="" />
         </div>
-      ))}
+      </div>
     </div>
-  );
+  ));
 };
 
 export default SolutionsCardList;

@@ -2,12 +2,13 @@ import React from "react";
 import navItems from "./NavItems.json";
 import { v4 } from "uuid";
 import Link from "next/link";
-import { FaArrowDown } from "react-icons/fa";
+import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 
 const NavBar = () => {
   return (
     <nav className="navBar">
-      <ul className="navBar_itemList">
+      <ul className="navBar_inner">
         {navItems.map((item: INavBarItem) => (
           <NavBarItem key={v4()} item={item} />
         ))}
@@ -16,7 +17,8 @@ const NavBar = () => {
   );
 };
 
-const NavBarItem = ({ item }: { item: INavBarItem }) => {
+const NavBarItem = (props: INavBarItemProps) => {
+  const { item, hasParent } = props;
   const hasChildren = item.children && item.children.length > 0;
 
   return (
@@ -25,12 +27,17 @@ const NavBarItem = ({ item }: { item: INavBarItem }) => {
         {item.title}
       </Link>
 
-      {hasChildren && <FaArrowDown className="arrow" />}
+      {hasChildren &&
+        (hasParent ? (
+          <IoIosArrowForward className="arrow" />
+        ) : (
+          <IoIosArrowDown className="arrow" />
+        ))}
 
       {hasChildren && (
         <ul className="navBar_itemList">
           {item.children?.map((child) => (
-            <NavBarItem key={v4()} item={child} />
+            <NavBarItem key={v4()} item={child} hasParent={true} />
           ))}
         </ul>
       )}
@@ -43,6 +50,11 @@ type INavBarItem = {
   path: string;
   cName: string;
   children?: INavBarItem[];
+};
+
+type INavBarItemProps = {
+  item: INavBarItem;
+  hasParent?: boolean;
 };
 
 export default NavBar;

@@ -171,7 +171,6 @@
   width: clamp(200px, 90%, 600px);
   height: 100%;
   border-radius: 20px;
-  background: #f5f5f5;
   position: relative;
   padding: 1.8rem;
   border: 2px solid #c3c6ce;
@@ -236,9 +235,10 @@
 .myCard:hover {
   border-color: #008bf8;
   box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+  background: #f5f5f591;
 }
 
 .myCard:hover .myCard_button {
-  transform: translate(-50%, -9%);
+  transform: translate(-50%, 50%);
   opacity: 1;
 }

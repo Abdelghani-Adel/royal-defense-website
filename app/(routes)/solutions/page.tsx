@@ -4,13 +4,9 @@ import SolutionsCardList from "./_solutionsCardList";
 
 const Page = () => {
   return (
-    <div className="pb-5">
+    <div>
       <PageStripe title="Solutions" />
-      <div className="container">
-        <div className="mb-3">
-          <SolutionsCardList />
-        </div>
-      </div>
+      <SolutionsCardList />
     </div>
   );
 };

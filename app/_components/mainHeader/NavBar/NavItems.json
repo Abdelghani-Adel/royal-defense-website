@@ -15,8 +15,63 @@
         "cName": "",
         "children": [
           {
-            "title": "tech 1",
-            "path": "/",
+            "title": "Video Survelliance Systems",
+            "path": "/solutions",
+            "cName": ""
+          },
+          {
+            "title": "Access Control Systems",
+            "path": "/solutions",
+            "cName": ""
+          },
+          {
+            "title": "Address & Sound Systems",
+            "path": "/solutions",
+            "cName": ""
+          },
+          {
+            "title": "vehicles Identification System",
+            "path": "/solutions",
+            "cName": ""
+          },
+          {
+            "title": "Gate Barrier",
+            "path": "/solutions",
+            "cName": ""
+          },
+          {
+            "title": "Pedestrian Entrance Gates",
+            "path": "/solutions",
+            "cName": ""
+          },
+          {
+            "title": "Infrastructure solutions",
+            "path": "/solutions",
+            "cName": ""
+          },
+          {
+            "title": "Control Rooms",
+            "path": "/solutions",
+            "cName": ""
+          },
+          {
+            "title": "Video Wall",
+            "path": "/solutions",
+            "cName": ""
+          },
+          {
+            "title": "Fire alarm systems",
+            "path": "/solutions",
+            "cName": ""
+          },
+          {
+            "title": "X-Ray Detection Solutions",
+            "path": "/solutions",
+            "cName": ""
+          },
+          {
+            "title": "Under vehicle scanners",
+            "path": "/solutions",
             "cName": ""
           }
         ]
@@ -27,8 +82,33 @@
         "cName": "",
         "children": [
           {
-            "title": "law 1",
-            "path": "/",
+            "title": "Smart Lightbar",
+            "path": "/solutions",
+            "cName": ""
+          },
+          {
+            "title": "Body Worn camera",
+            "path": "/solutions",
+            "cName": ""
+          },
+          {
+            "title": "In car survelliance",
+            "path": "/solutions",
+            "cName": ""
+          },
+          {
+            "title": "Anti drone",
+            "path": "/solutions",
+            "cName": ""
+          },
+          {
+            "title": "X-RAY",
+            "path": "/solutions",
+            "cName": ""
+          },
+          {
+            "title": "Truck X-Ray Scanning",
+            "path": "/solutions",
             "cName": ""
           }
         ]

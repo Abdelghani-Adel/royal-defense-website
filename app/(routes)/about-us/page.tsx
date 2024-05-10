@@ -12,23 +12,11 @@ const Page = () => {
     <div className="aboutUs">
       <PageStripe title="About Royal Defense" />
       <div className="container">
-        <Tabs>
-          <TabList>
-            <Tab>Our Story</Tab>
-            <Tab>Our Mission</Tab>
-            <Tab>Our Vission</Tab>
-          </TabList>
-
-          <TabPanel>
-            <OurStory />
-          </TabPanel>
-          <TabPanel>
-            <OurMission />
-          </TabPanel>
-          <TabPanel>
-            <OurVision />
-          </TabPanel>
-        </Tabs>
+        <div className="d-flex gap-5 flex-column">
+          <OurStory />
+          <OurMission />
+          <OurVision />
+        </div>
       </div>
     </div>
   );

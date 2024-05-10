@@ -5,6 +5,7 @@ import HeaderActions from "./HeaderActions";
 import MobileMenu from "./MobileMenu";
 import BtnTogglerArrowLeft from "../ui/BtnTogglerArrowLeft";
 import Logo from "./Logo";
+import NavBar from "./NavBar/NavBar";
 
 const BottomHeader = () => {
   const [mobileMenuShown, setMobileMenuShown] = useState(false);
@@ -16,8 +17,12 @@ const BottomHeader = () => {
     <div className="bottomHeader">
       <Logo />
 
-      <div className="d-none d-lg-block">
+      {/* <div className="d-none d-lg-block">
         <Navbar />
+      </div> */}
+
+      <div className="d-none d-lg-block">
+        <NavBar />
       </div>
 
       <div className="d-none d-lg-block ms-auto">

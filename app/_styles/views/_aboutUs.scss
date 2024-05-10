@@ -7,3 +7,14 @@
   font-weight: 300;
   margin-bottom: 0.5rem;
 }
+
+.aboutusPic {
+  position: relative;
+  width: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  outline: 2px solid blue;
+  outline-offset: 5px;
+  height: 300px;
+  flex-shrink: 0;
+}
