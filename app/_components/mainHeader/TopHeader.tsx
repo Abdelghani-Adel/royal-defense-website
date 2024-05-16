@@ -16,7 +16,7 @@ const TopHeader = () => {
           <FaPhone /> 01153588887
         </p>
         <p className="px-3 borderLeft">
-          <FaRegClock /> Sunday - Friday 09:00AM - 05:00PM
+          <FaRegClock /> Sunday - Thursday 09:00AM - 05:00PM
         </p>
       </div>
     </div>
