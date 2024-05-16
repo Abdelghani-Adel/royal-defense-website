@@ -24,7 +24,7 @@ const MyCard = (props: Props) => {
         <p className="myCard_text-body">{text}</p>
       </div>
       <button className="myCard_button">
-        <Link href={urlTarget} target={targetBlank && "_blank"}>
+        <Link href={urlTarget} target={targetBlank ? "_blank" : "_self"}>
           {btnTitle ? btnTitle : "More Info"}
         </Link>
       </button>
