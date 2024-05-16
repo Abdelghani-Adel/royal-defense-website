@@ -1,12 +1,14 @@
 import PageStripe from "@/app/_components/_common/PageStripe";
-import React from "react";
+import React, { Suspense } from "react";
 import SolutionsCardList from "./_solutionsCardList";
 
 const Page = () => {
   return (
     <div>
       <PageStripe title="Solutions" />
-      <SolutionsCardList />
+      <Suspense>
+        <SolutionsCardList />
+      </Suspense>
     </div>
   );
 };
