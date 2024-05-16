@@ -92,7 +92,7 @@
   height: 45vh;
   overflow: hidden;
   position: relative;
-  margin-bottom: 2rem;
+  // margin-bottom: 2rem;
 }
 
 .pageStripBackground {
@@ -214,12 +214,19 @@
 
 .myCard_text-body {
   color: rgb(134, 134, 134);
+  font-weight: 300;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /*Image*/
 .myCard_img {
   position: relative;
-  height: 5rem;
+  height: 8rem;
   aspect-ratio: 1;
   margin: auto;
 }

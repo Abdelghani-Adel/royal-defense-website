@@ -558,7 +558,6 @@ q:after {
   height: 45vh;
   overflow: hidden;
   position: relative;
-  margin-bottom: 2rem;
 }
 
 .pageStripBackground {
@@ -674,12 +673,18 @@ q:after {
 
 .myCard_text-body {
   color: rgb(134, 134, 134);
+  font-weight: 300;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /*Image*/
 .myCard_img {
   position: relative;
-  height: 5rem;
+  height: 8rem;
   aspect-ratio: 1;
   margin: auto;
 }
@@ -904,6 +909,7 @@ q:after {
   display: flex;
   align-items: center;
   gap: 50px;
+  position: relative;
 }
 
 .solutionCard.bg {
@@ -914,4 +920,17 @@ q:after {
   position: relative;
   aspect-ratio: 1;
   width: 250px;
+}
+
+.solutionCard .category {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  background-color: #106eea;
+  color: #fff;
+  width: 200px;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
 }

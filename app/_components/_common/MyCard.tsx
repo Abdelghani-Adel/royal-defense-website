@@ -8,10 +8,11 @@ type Props = {
   text: string;
   urlTarget: string;
   btnTitle?: string;
+  targetBlank?: boolean;
 };
 
 const MyCard = (props: Props) => {
-  const { title, image, text, btnTitle, urlTarget } = props;
+  const { title, image, text, btnTitle, urlTarget, targetBlank } = props;
 
   return (
     <div className="myCard">
@@ -23,7 +24,9 @@ const MyCard = (props: Props) => {
         <p className="myCard_text-body">{text}</p>
       </div>
       <button className="myCard_button">
-        <Link href={urlTarget}>{btnTitle ? btnTitle : "More Info"}</Link>
+        <Link href={urlTarget} target={targetBlank && "_blank"}>
+          {btnTitle ? btnTitle : "More Info"}
+        </Link>
       </button>
     </div>
   );

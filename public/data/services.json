@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Expert Consultation",
+    "desc": "Our security consultants conduct thorough assessments to understand your unique security needs. We collaborate with you to develop a customized security plan that aligns with your budget and threat profile.",
+    "img": "/images/services/consulting.png"
+  },
+  {
+    "title": "Cutting-Edge R&D",
+    "desc": "At Royal Defense, we stay ahead of the curve. Our dedicated R&D team constantly evaluates and implements the latest security technologies, guaranteeing your security solutions remain effective against threats.",
+    "img": "/images/services/edge-computing.png"
+  },
+  {
+    "title": "Streamlined Outsourcing",
+    "desc": "Focus on your core operations. We offer comprehensive outsourcing solutions that handle everything from system installation and maintenance to 24/7 monitoring and rapid response.",
+    "img": "/images/services/optimization.png"
+  },
+  {
+    "title": "Empowering Training",
+    "desc": "Equip your team with the knowledge and skills to maximize your security system's effectiveness. We offer tailored training programs that address your specific security solutions and team needs.",
+    "img": "/images/services/human-resource.png"
+  },
+  {
+    "title": "Extended Warranties",
+    "desc": "Protect your investment with a warranty extension plan. This provides additional coverage for repairs and replacements beyond the manufacturer's warranty, offering peace of mind for unforeseen circumstances.",
+    "img": "/images/services/full-screen.png"
+  },
+  {
+    "title": "Proactive Maintenance",
+    "desc": "Our certified technicians perform regular maintenance to optimize system performance, identify potential issues before they become problems, and maximize the lifespan of your security investments.",
+    "img": "/images/services/approach.png"
+  }
+]

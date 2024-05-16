@@ -7,6 +7,7 @@ import Vendors from "./_vendors";
 import SoftwareCardsList from "./_softwareCardsList";
 import { HiOutlineMail } from "react-icons/hi";
 import Software from "./_software";
+import ServicesCards from "./_servicesCards";
 
 export default function Home() {
   return (
@@ -25,16 +26,37 @@ export default function Home() {
 
       <div className="section solutionsSection">
         <div className="container">
-          <h1 className="text-center mb-4" data-aos="fade-up" data-aos-offset={100}>
+          <h1
+            className="text-center mb-4"
+            data-aos="fade-up"
+            data-aos-offset={100}
+          >
             Solutions & Technologies
           </h1>
           <SolutionsCardList />
         </div>
       </div>
 
+      <div className="section solutionsSection">
+        <div className="container">
+          <h1
+            className="text-center mb-4"
+            data-aos="fade-up"
+            data-aos-offset={100}
+          >
+            Our Services
+          </h1>
+          <ServicesCards />
+        </div>
+      </div>
+
       <div className="section">
         <div className="container">
-          <h2 className="text-center mb-4" data-aos="fade-up" data-aos-offset={100}>
+          <h2
+            className="text-center mb-4"
+            data-aos="fade-up"
+            data-aos-offset={100}
+          >
             Software Solutions
           </h2>
           <div className="row g-5">
@@ -66,7 +88,9 @@ export default function Home() {
                 <HiOutlineMail className="display-2" />
                 <div>
                   <h5>Subscribe to our news letter</h5>
-                  <p className="fw-light">Sign up and we Will send the Lest deals to you</p>
+                  <p className="fw-light">
+                    Sign up and we Will send the Lest deals to you
+                  </p>
                 </div>
               </div>
 
