@@ -1,3 +1,4 @@
+import CarouselSlider from "@/app/_components/ui/CarouselSlider";
 import Image from "next/image";
 import React from "react";
 import Slider from "react-slick";
@@ -9,7 +10,7 @@ const settings = {
   autoplaySpeed: 3000,
   infinite: true,
   slidesToShow: 4,
-  slidesToScroll: 1,
+  slidesToScroll: 2,
   responsive: [
     {
       breakpoint: 1024,
@@ -48,23 +49,25 @@ const Vendors = () => {
         Our Key Clients
       </h2>
 
-      <Slider {...settings} className="vendorCarousel">
-        {images.map((image, i) => (
-          <div
-            className="vendorSlice"
-            key={v4()}
-            data-aos="fade-up"
-            data-aos-delay={(i + 1) * 100}
-            data-aos-offset={100}
-          >
-            <div className="vendorSlice_inner">
-              <div className="vendorSlice_image">
-                <Image fill src={image} alt="" />
+      <div className="vendorCarousel">
+        <CarouselSlider>
+          {images.map((image, i) => (
+            <div
+              className="vendorSlice"
+              key={v4()}
+              data-aos="fade-up"
+              data-aos-delay={(i + 1) * 100}
+              data-aos-offset={100}
+            >
+              <div className="vendorSlice_inner">
+                <div className="vendorSlice_image">
+                  <Image fill src={image} alt="" />
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </Slider>
+          ))}
+        </CarouselSlider>
+      </div>
     </div>
   );
 };

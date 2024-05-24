@@ -2,12 +2,13 @@
 import AboutUs from "./_aboutUs";
 import HeroSlider from "./_heroSlider";
 import LetsConnect from "../../_components/_common/LetsConnect";
-import SolutionsCardList from "./_solutionsCardList";
+import TechnologicalSolutions from "./_technologicalSolutions";
 import Vendors from "./_vendors";
 import SoftwareCardsList from "./_softwareCardsList";
 import { HiOutlineMail } from "react-icons/hi";
 import Software from "./_software";
 import ServicesCards from "./_servicesCards";
+import LawSolutions from "./_lawSolutions";
 
 export default function Home() {
   return (
@@ -18,10 +19,6 @@ export default function Home() {
         <section className="section">
           <AboutUs />
         </section>
-
-        <section className="section">
-          <Vendors />
-        </section>
       </div>
 
       <div className="section solutionsSection">
@@ -31,9 +28,9 @@ export default function Home() {
             data-aos="fade-up"
             data-aos-offset={100}
           >
-            Solutions & Technologies
+            Technological solutions
           </h1>
-          <SolutionsCardList />
+          <TechnologicalSolutions />
         </div>
       </div>
 
@@ -44,9 +41,9 @@ export default function Home() {
             data-aos="fade-up"
             data-aos-offset={100}
           >
-            Our Services
+            Law enforcement solutions
           </h1>
-          <ServicesCards />
+          <LawSolutions />
         </div>
       </div>
 
@@ -63,6 +60,25 @@ export default function Home() {
             <Software />
           </div>
         </div>
+      </div>
+
+      <div className="section solutionsSection">
+        <div className="container">
+          <h1
+            className="text-center mb-4"
+            data-aos="fade-up"
+            data-aos-offset={100}
+          >
+            Our Services
+          </h1>
+          <ServicesCards />
+        </div>
+      </div>
+
+      <div className="container">
+        <section className="section">
+          <Vendors />
+        </section>
       </div>
 
       {/* <div className="section">

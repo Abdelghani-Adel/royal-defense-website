@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import Slider from "react-slick";
 
@@ -24,11 +25,18 @@ const HeroSlider = () => {
   return (
     <div className="heroSlider_wrapper">
       <div className="heroSlider_captions">
-        <h1 data-aos="fade-up" data-aos-once id="typewriter" className="text-white">
+        <h1
+          data-aos="fade-up"
+          data-aos-once
+          id="typewriter"
+          className="text-white"
+        >
           <Typewriter
             onInit={(typewriter) => {
               typewriter
-                .typeString("Next-Level Solutions Powered by Cutting-Edge Technologies.")
+                .typeString(
+                  "Next-Level Solutions Powered by Cutting-Edge Technologies.",
+                )
                 .start();
             }}
           />
@@ -41,7 +49,9 @@ const HeroSlider = () => {
           data-aos-offset={-150}
         >
           <span className="textPrimary fw-bold">Royal Defense </span>
-          <span className="text-white">provides best-in-class security management solutions.</span>
+          <span className="text-white">
+            provides best-in-class security management solutions.
+          </span>
         </p>
 
         <button
@@ -51,18 +61,19 @@ const HeroSlider = () => {
           data-aos-once
           data-aos-offset={-150}
         >
-          Get in touch
+          <Link href="/contact">Get in touch</Link>
         </button>
       </div>
 
-      <Slider {...settings}>
-        <div className="heroSlider_slice">
-          <Image fill src="/images/heroslider/3.png" alt="" />
-        </div>
+      <div className="heroSlider_slice">
+        <Image fill src="/images/heroslider/heroImage.png" alt="" />
+      </div>
+
+      {/* <Slider {...settings}>
         <div className="heroSlider_slice">
           <Image fill src="/images/heroslider/2.jpg" alt="" />
         </div>
-      </Slider>
+      </Slider> */}
     </div>
   );
 };

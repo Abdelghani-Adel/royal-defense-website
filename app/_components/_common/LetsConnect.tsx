@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const LetsConnect = () => {
@@ -12,7 +13,7 @@ const LetsConnect = () => {
         data-aos-delay={100}
         data-aos-offset={100}
       >
-        Lets Connect
+        <Link href="/contact">Lets Connect</Link>
       </button>
     </div>
   );

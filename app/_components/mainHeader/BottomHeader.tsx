@@ -1,11 +1,10 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import Navbar from "./Navbar";
 import HeaderActions from "./HeaderActions";
 import MobileMenu from "./MobileMenu";
 import BtnTogglerArrowLeft from "../ui/BtnTogglerArrowLeft";
 import Logo from "./Logo";
-import NavBar from "./NavBar/NavBar";
+import NavBar from "./Navbar";
 
 const BottomHeader = () => {
   const [mobileMenuShown, setMobileMenuShown] = useState(false);

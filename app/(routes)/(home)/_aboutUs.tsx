@@ -1,5 +1,6 @@
 import MyCard from "@/app/_components/_common/MyCard";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const AboutUs = () => {
@@ -7,7 +8,7 @@ const AboutUs = () => {
     <div className="row">
       <div className="d-none d-md-block col-md-6">
         <div className="home_AboutImage" data-aos="fade-right">
-          <Image src="/images/aboutSection.png" fill alt="" />
+          <Image src="/images/integratedSolutions.png" fill alt="" />
         </div>
       </div>
 
@@ -44,14 +45,20 @@ const AboutUs = () => {
               we deliver seamless, customized security and automation systems to
               help our customers thrive in today's digital world.{" "}
             </p>
+            <p className="fw-normal" data-aos="fade-left" data-aos-delay={300}>
+              We are thrilled to welcome you to Royal Defense, where excellence
+              in technology meets dedication to our clients. Together, let's
+              embark on a journey towards enhanced security, efficiency, and
+              success
+            </p>
           </div>
 
           <button
             className="rdBtn mainBtn"
             data-aos="fade-left"
-            data-aos-delay={300}
+            data-aos-delay={350}
           >
-            More About Royal Defense
+            <Link href="/about-us">More About Royal Defense</Link>
           </button>
         </div>
       </div>

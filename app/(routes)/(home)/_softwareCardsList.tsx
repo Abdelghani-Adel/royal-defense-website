@@ -11,7 +11,7 @@ const settings = {
   autoplaySpeed: 10000,
   infinite: true,
   slidesToShow: 3,
-  slidesToScroll: 1,
+  slidesToScroll: 2,
   responsive: [
     {
       breakpoint: 1024,

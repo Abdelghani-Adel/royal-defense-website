@@ -1,12 +1,12 @@
 import MyCard from "@/app/_components/_common/MyCard";
 import CarouselSlider from "@/app/_components/ui/CarouselSlider";
-import services from "@/public/data/services.json";
+import solutions from "@/public/data/solutions.json";
 import { v4 } from "uuid";
 
-const ServicesCards = () => {
+const LawSolutions = () => {
   return (
     <CarouselSlider>
-      {services.map((card, i) => (
+      {solutions.law.map((card, i) => (
         <div
           key={v4()}
           data-aos="fade-up"
@@ -18,8 +18,7 @@ const ServicesCards = () => {
               title={card.title}
               image={card.img}
               text={card.desc}
-              urlTarget="/lpr-test"
-              targetBlank
+              urlTarget={card.urlTarget}
             />
           </div>
         </div>
@@ -28,4 +27,4 @@ const ServicesCards = () => {
   );
 };
 
-export default ServicesCards;
+export default LawSolutions;

@@ -1,36 +1,9 @@
 "use client";
-import React, { useEffect } from "react";
-import Slider from "react-slick";
-import { v4 } from "uuid";
 import solutions from "@/public/data/solutions.json";
-import RDCard from "@/app/_components/_common/RDCard";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
-
-const settings = {
-  dots: false,
-  // autoplay: true,
-  autoplaySpeed: 10000,
-  infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
+import { useEffect } from "react";
+import { v4 } from "uuid";
 
 const SolutionsCardList = () => {
   const params = useSearchParams();
@@ -60,7 +33,7 @@ const SolutionsCardList = () => {
             <p className="fw-light">{card.desc}</p>
           </div>
 
-          <div>
+          <div className="d-none d-lg-block">
             <div className="solutionCard_img">
               <Image src={card.img} fill alt="" />
             </div>
@@ -80,7 +53,7 @@ const SolutionsCardList = () => {
             <p className="fw-light">{card.desc}</p>
           </div>
 
-          <div>
+          <div className="d-none d-lg-block">
             <div className="solutionCard_img">
               <Image src={card.img} fill alt="" />
             </div>

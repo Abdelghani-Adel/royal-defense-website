@@ -1,11 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Logo = () => {
   return (
-    <div className="headerLogo">
-      <Image fill src="/images/logo.png" alt="Logo" />
-    </div>
+    <Link href="/" className="headerLogo">
+      <Image fill src="/images/headerLogo.png" alt="Logo" />
+    </Link>
   );
 };
 

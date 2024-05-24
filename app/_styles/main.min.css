@@ -250,10 +250,6 @@ q:after {
   font-size: 0.9rem;
 }
 
-.borderLeft {
-  border-left: 1px solid;
-}
-
 .bottomHeader {
   background-color: #fff;
   padding: 10px 30px 0;
@@ -264,96 +260,8 @@ q:after {
 
 .headerLogo {
   position: relative;
-  height: 60px;
-  aspect-ratio: 1;
-}
-
-.navList {
-  list-style: none;
-  padding-inline-start: 0;
-}
-
-.navItem {
-  color: #1b034f;
-  position: relative;
-  transition: 0.3s ease-in-out;
-  padding: 0.5rem;
-}
-
-.navItem + .navItem {
-  margin-top: 0.5rem;
-}
-
-.navItem::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #106eea;
-  transition: 0.3s ease-in-out;
-}
-
-.navItem.active,
-.navItem:hover {
-  color: #106eea;
-}
-
-.navItem.active::after,
-.navItem:hover::after {
-  width: 100%;
-}
-
-.navLink {
-  color: inherit;
-  text-decoration: none;
-  font-weight: 300;
-  text-transform: uppercase;
-  display: block;
-  width: 100%;
-}
-
-@media (min-width: 992px) {
-  .navList {
-    display: flex;
-    gap: 20px;
-  }
-  .navItem {
-    padding: 0;
-  }
-  .navItem + .navItem {
-    margin-top: 0;
-  }
-}
-.dropNav {
-  padding-top: 10px;
-}
-
-.dropNav .dropMenu {
-  padding-left: 10px;
-  display: none;
-}
-
-.dropNav .dropMenu.shown {
-  display: block;
-}
-
-.dropNav_title {
-  font-weight: 300;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-right: 15px;
-}
-
-.dropNav_title .arrow {
-  cursor: pointer;
-}
-
-.dropDownNav .arrowDown {
-  cursor: pointer;
+  height: 50px;
+  width: 220px;
 }
 
 .navBar_inner {
@@ -381,7 +289,6 @@ q:after {
 .navBar_itemList {
   display: none;
   width: max-content;
-  border: 1px solid #ccc;
   border-radius: 5px;
 }
 
@@ -390,7 +297,7 @@ q:after {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #00439b;
+  background-color: rgba(0, 0, 0, 0.3294117647);
   z-index: 100;
 }
 
@@ -399,13 +306,13 @@ q:after {
   position: absolute;
   top: 0;
   left: 100%;
-  background-color: #00439b;
+  background-color: rgba(0, 0, 0, 0.68);
   z-index: 100;
   color: #fff;
 }
 
 .navBar_itemList .navBar_item:hover {
-  background-color: #fff;
+  background-color: #a7a7a7;
   color: #000;
 }
 
@@ -422,7 +329,6 @@ q:after {
   border-radius: 15px;
   transition: 0.3s ease-in-out;
 }
-
 .headerActions .action a {
   color: #fff;
   text-decoration: none;
@@ -431,7 +337,6 @@ q:after {
   width: 100%;
   height: 100%;
 }
-
 .headerActions .action:hover {
   background-color: #1b034f;
 }
@@ -477,23 +382,49 @@ q:after {
   margin-top: auto;
 }
 
-.RDCard {
-  background-color: #fff;
-  width: 80%;
-  margin: auto;
-  padding: 10px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
+.mainFooter {
+  background-color: #106eea;
+  color: #fff;
+  padding: 20px;
+  margin-top: 2rem;
 }
 
-.RDCard_image {
-  position: relative;
-  height: 5rem;
+.footer_iconWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 10rem;
   aspect-ratio: 1;
-  margin: auto;
+}
+
+.fotter_ul {
+  list-style: square;
+  padding-inline-start: 40px;
+}
+
+.mainFooter_link {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.mainFooter_link:hover {
+  color: #afafaf;
+}
+
+.socialIcon_list {
+  display: flex;
+  gap: 10px;
+}
+
+.socialIcon {
+  color: inherit;
+  font-size: 2.5rem;
 }
 
 .rdBtn {
@@ -521,7 +452,6 @@ q:after {
   border-color: #106eea;
   color: #fff;
 }
-
 .rdBtn.mainBtn:hover {
   background-color: #1b034f;
   border-color: #1b034f;
@@ -532,7 +462,6 @@ q:after {
   border-color: #1b034f;
   color: #fff;
 }
-
 .rdBtn.secondBtn:hover {
   background-color: #106eea;
   border-color: #1b034f;
@@ -681,7 +610,6 @@ q:after {
   text-overflow: ellipsis;
 }
 
-/*Image*/
 .myCard_img {
   position: relative;
   height: 8rem;
@@ -689,14 +617,12 @@ q:after {
   margin: auto;
 }
 
-/*Text*/
 .myCard_text-title {
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
 }
 
-/*Hover*/
 .myCard:hover {
   border-color: #008bf8;
   box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
@@ -708,40 +634,16 @@ q:after {
   opacity: 1;
 }
 
-.mainFooter {
-  background-color: #1b034f;
-  color: #fff;
-  padding: 20px;
-  margin-top: 2rem;
-  border: 2px solid;
+.slick-prev,
+.slick-next {
+  width: auto;
+  height: auto;
 }
 
-.footer_iconWrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 10rem;
-  aspect-ratio: 1;
-}
-
-.fotter_ul {
-  list-style: square;
-  padding-inline-start: 40px;
-}
-
-.mainFooter_link {
-  text-decoration: none;
-  color: #fff;
-  transition: 0.3s ease-in-out;
-  display: block;
-  margin-bottom: 0.4rem;
-  font-size: 1rem;
-  font-weight: 300;
-}
-
-.mainFooter_link:hover {
-  color: #afafaf;
+.slick-prev:before,
+.slick-next:before {
+  font-size: 2.5rem;
+  color: #106eea;
 }
 
 .heroSlider_wrapper {
@@ -782,6 +684,12 @@ q:after {
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
+}
+
+.heroSlider_btn a {
+  color: inherit;
+  display: block;
+  text-decoration: none;
 }
 
 .heroSlider_btn:hover {
@@ -831,7 +739,7 @@ q:after {
 }
 .heroSlider_slice {
   position: relative;
-  height: clamp(250px, 25rem + 10vw, 90vh);
+  height: 80vh;
 }
 
 .heroSlider_slice::after {
@@ -880,6 +788,13 @@ q:after {
   flex-direction: column;
   gap: 20px;
   align-items: start;
+}
+
+.softwareCardImage {
+  position: relative;
+  width: 250px;
+  height: 160px;
+  flex-shrink: 0;
 }
 
 .aboutUs h2 {

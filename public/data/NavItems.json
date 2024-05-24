@@ -1,0 +1,133 @@
+[
+  {
+    "title": "home",
+    "path": "/",
+    "cName": ""
+  },
+  {
+    "title": "Solutions",
+    "path": "/solutions",
+    "cName": "nav-item",
+    "children": [
+      {
+        "title": "Technological",
+        "path": "/qaindex",
+        "cName": "",
+        "children": [
+          {
+            "title": "Video Survelliance Systems",
+            "path": "/solutions?section=videoSS",
+            "cName": ""
+          },
+          {
+            "title": "Access Control Systems",
+            "path": "/solutions?section=accessCS",
+            "cName": ""
+          },
+          {
+            "title": "Address & Sound Systems",
+            "path": "/solutions?section=addressSoundSystems",
+            "cName": ""
+          },
+          {
+            "title": "vehicles Identification System",
+            "path": "/solutions?section=vehiclesIdentification",
+            "cName": ""
+          },
+          {
+            "title": "Gate Barrier",
+            "path": "/solutions?section=gateBarrier",
+            "cName": ""
+          },
+          {
+            "title": "Pedestrian Entrance Gates",
+            "path": "/solutions?section=pedestrianGates",
+            "cName": ""
+          },
+          {
+            "title": "Infrastructure solutions",
+            "path": "/solutions?section=infrastructureSolutions",
+            "cName": ""
+          },
+          {
+            "title": "Control Rooms",
+            "path": "/solutions?section=controlRooms",
+            "cName": ""
+          },
+          {
+            "title": "Video Wall",
+            "path": "/solutions?section=videoWall",
+            "cName": ""
+          },
+          {
+            "title": "Fire alarm systems",
+            "path": "/solutions?section=fireAlarm",
+            "cName": ""
+          },
+          {
+            "title": "/solutions?section=detectionSolutions",
+            "path": "/solutions",
+            "cName": ""
+          },
+          {
+            "title": "Under vehicle scanners",
+            "path": "/solutions?section=underVehicle",
+            "cName": ""
+          }
+        ]
+      },
+      {
+        "title": "Law Enforcement",
+        "path": "/solutions",
+        "cName": "",
+        "children": [
+          {
+            "title": "Smart Lightbar",
+            "path": "/solutions?section=smartLightbar",
+            "cName": ""
+          },
+          {
+            "title": "Body Worn camera",
+            "path": "/solutions?section=bodyCam",
+            "cName": ""
+          },
+          {
+            "title": "In car survelliance",
+            "path": "/solutions?section=carSurvelliance",
+            "cName": ""
+          },
+          {
+            "title": "Anti drone",
+            "path": "/solutions?section=antiDrone",
+            "cName": ""
+          },
+          {
+            "title": "X-RAY",
+            "path": "/solutions?section=xray",
+            "cName": ""
+          },
+          {
+            "title": "Truck X-Ray Scanning",
+            "path": "/solutions?section=truckXray",
+            "cName": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Software",
+    "path": "/software",
+    "cName": ""
+  },
+  {
+    "title": "About us",
+    "path": "/about-us",
+    "cName": ""
+  },
+  {
+    "title": "Contact us",
+    "path": "/contact",
+    "cName": ""
+  }
+]

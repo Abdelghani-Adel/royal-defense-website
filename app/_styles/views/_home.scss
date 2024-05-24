@@ -42,6 +42,12 @@
   transition: all 0.2s ease-in;
 }
 
+.heroSlider_btn a {
+  color: inherit;
+  display: block;
+  text-decoration: none;
+}
+
 .heroSlider_btn:hover {
   background: rgb(61, 106, 255);
   box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
@@ -92,7 +98,8 @@
 
 .heroSlider_slice {
   position: relative;
-  height: clamp(250px, 25rem + 10vw, 90vh);
+  // height: clamp(250px, 25rem + 10vw, 90vh);
+  height: 80vh;
 }
 
 .heroSlider_slice::after {
@@ -146,4 +153,11 @@
   flex-direction: column;
   gap: 20px;
   align-items: start;
+}
+
+.softwareCardImage {
+  position: relative;
+  width: 250px;
+  height: 160px;
+  flex-shrink: 0;
 }

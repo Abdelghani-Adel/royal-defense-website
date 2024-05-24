@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 import { HiOutlineMail } from "react-icons/hi";
+import SocialMediaLinks from "./SocialMediaLinks";
 
 const MainFooter = () => {
   const pathname = usePathname();
@@ -16,14 +17,14 @@ const MainFooter = () => {
         <div className="row g-4">
           <div className="col-12 col-md-2 position-relative">
             <div className="d-none d-md-block footer_iconWrapper">
-              <Image src="/images/logo.png" fill alt="" />
+              <Image src="/images/logoWhite.png" fill alt="" />
             </div>
           </div>
 
           <div className="col-12 col-md-3">
             <h5 className="mb-3">CUSTOMER SUPPORT</h5>
-            <p className="fw-light">+01153588887</p>
-            <p className="fw-light">info@royaldefense.cloud</p>
+            <p className="fw-light">+201101005678</p>
+            <p className="fw-light">info@royal-defense.com</p>
           </div>
 
           <div className="col-12 col-md-3">
@@ -56,6 +57,12 @@ const MainFooter = () => {
                 </Link>
               </li>
             </ul>
+          </div>
+
+          <div className="col-12 col-md-3">
+            <h5 className="mb-3">Follow us</h5>
+
+            <SocialMediaLinks />
           </div>
 
           {/* <div className="col-12 col-md-4">

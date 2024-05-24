@@ -1,62 +1,59 @@
-"use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import React from "react";
-import { FaArrowDown } from "react-icons/fa6";
-import SolutionsDropdown from "./SolutionsDropdown";
+import navItems from "@/public/data/NavItems.json";
+import { v4 } from "uuid";
+import Link from "next/link";
+import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
 
-const Navbar = () => {
-  const pathname = usePathname();
-
+const NavBar = () => {
   return (
-    <nav>
-      <ul className="navList">
-        <li className={`navItem ${pathname === "/" ? "active" : ""}`}>
-          <Link className="navLink" aria-current="page" href="/">
-            Home
-          </Link>
-        </li>
-
-        {/* <SolutionsDropdown /> */}
-
-        <li className={`navItem ${pathname === "/solutions" ? "active" : ""}`}>
-          <Link className="navLink" aria-current="page" href="/solutions">
-            Solutions
-          </Link>
-        </li>
-
-        <li className={`navItem ${pathname === "/software" ? "active" : ""}`}>
-          <Link className="navLink" aria-current="page" href="/software">
-            Software
-          </Link>
-        </li>
-
-        <li className={`navItem ${pathname === "/services" ? "active" : ""}`}>
-          <Link className="navLink" aria-current="page" href="/services">
-            Services
-          </Link>
-        </li>
-
-        {/* <li className={`navItem ${pathname === "/catalogue" ? "active" : ""}`}>
-          <Link className="navLink" aria-current="page" href="/catalogue">
-            E-Catalogue
-          </Link>
-        </li> */}
-
-        <li className={`navItem ${pathname === "/about-us" ? "active" : ""}`}>
-          <Link className="navLink" aria-current="page" href="/about-us">
-            About Us
-          </Link>
-        </li>
-
-        <li className={`navItem ${pathname === "/contact" ? "active" : ""}`}>
-          <Link className="navLink" aria-current="page" href="/contact">
-            Contact Us
-          </Link>
-        </li>
+    <nav className="navBar">
+      <ul className="navBar_inner">
+        {navItems.map((item: INavBarItem) => (
+          <NavBarItem key={v4()} item={item} />
+        ))}
       </ul>
     </nav>
   );
 };
 
-export default Navbar;
+const NavBarItem = (props: INavBarItemProps) => {
+  const { item, hasParent } = props;
+  const hasChildren = item.children && item.children.length > 0;
+
+  return (
+    <li className="navBar_item">
+      <Link href={item.path} className="navBar_link">
+        {item.title}
+      </Link>
+
+      {hasChildren &&
+        (hasParent ? (
+          <IoIosArrowForward className="arrow" />
+        ) : (
+          <IoIosArrowDown className="arrow" />
+        ))}
+
+      {hasChildren && (
+        <ul className="navBar_itemList">
+          {item.children?.map((child) => (
+            <NavBarItem key={v4()} item={child} hasParent={true} />
+          ))}
+        </ul>
+      )}
+    </li>
+  );
+};
+
+type INavBarItem = {
+  title: string;
+  path: string;
+  cName: string;
+  children?: INavBarItem[];
+};
+
+type INavBarItemProps = {
+  item: INavBarItem;
+  hasParent?: boolean;
+};
+
+export default NavBar;

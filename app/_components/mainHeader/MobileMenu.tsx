@@ -1,9 +1,8 @@
 import React from "react";
-import Navbar from "./Navbar";
 import BtnMenuCloseX from "../ui/BtnMenuCloseX";
 import Logo from "./Logo";
 import HeaderActions from "./HeaderActions";
-import NavBar from "./NavBar/NavBar";
+import NavBar from "./Navbar";
 
 type props = {
   isShown: boolean;
@@ -21,10 +20,8 @@ const MobileMenu = (props: props) => {
       </div>
 
       <div onClick={closeMenu}>
-        <Navbar />
+        <NavBar />
       </div>
-
-      {/* <NavBar /> */}
 
       <div className="mobileMenu_footer" onClick={closeMenu}>
         <HeaderActions />

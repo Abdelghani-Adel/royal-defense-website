@@ -1,0 +1,435 @@
+@use "./base/variables" as v;
+@use "./mixins/mediaQuery" as mixins;
+
+// =================================== //
+// Layout //
+// =================================== //
+// Header
+.topHeader {
+  display: flex;
+  justify-content: space-between;
+  background-color: v.$primaryColor;
+  color: #fff;
+  padding: 5px 20px;
+  font-size: 0.9rem;
+}
+
+.bottomHeader {
+  background-color: #fff;
+  padding: 10px 30px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.headerLogo {
+  position: relative;
+  height: 50px;
+  width: 220px;
+}
+
+.navBar_inner {
+  display: flex;
+  gap: 10px;
+}
+
+.navBar_item {
+  font-weight: 300;
+  position: relative;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+}
+
+.navBar_link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.navBar_itemList {
+  display: none;
+  width: max-content;
+  // border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+// first level of sub nav
+.navBar_inner > .navBar_item:hover > .navBar_itemList {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #00000054;
+  z-index: 100;
+}
+
+// other levels
+.navBar_item:hover > .navBar_itemList {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: rgb(0 0 0 / 68%);
+  z-index: 100;
+  color: #fff;
+}
+
+.navBar_itemList .navBar_item:hover {
+  background-color: #a7a7a7;
+  color: #000;
+}
+
+.headerActions {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.headerActions .action {
+  border: none;
+  outline: none;
+  background-color: v.$primaryColor;
+  padding: 0;
+  border-radius: 15px;
+  transition: 0.3s ease-in-out;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover {
+    background-color: v.$secondaryColor;
+  }
+}
+
+.mobileMenu {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  transition: 0.5s ease-in-out;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  z-index: 4;
+}
+
+.mobileMenu.shown {
+  left: 0;
+}
+
+.mobileMenu_closeBtn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 0;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.mobileMenu_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(189, 189, 189);
+  padding: 10px 30px;
+  margin-bottom: 0.5rem;
+}
+
+.mobileMenu_footer {
+  padding: 10px;
+  border-top: 1px solid rgb(189, 189, 189);
+  margin-top: auto;
+}
+
+// footer
+.mainFooter {
+  background-color: #106eea;
+  color: #fff;
+  padding: 20px;
+  margin-top: 2rem;
+}
+
+.footer_iconWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 10rem;
+  aspect-ratio: 1;
+}
+
+.fotter_ul {
+  list-style: square;
+  padding-inline-start: 40px;
+}
+
+.mainFooter_link {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.mainFooter_link:hover {
+  color: #afafaf;
+}
+
+.socialIcon_list {
+  display: flex;
+  gap: 10px;
+}
+
+.socialIcon {
+  color: inherit;
+  font-size: 2.5rem;
+}
+
+// ============================================== //
+// rdBtn
+// ============================================== //
+.rdBtn {
+  min-height: 50px;
+  line-height: 50px;
+  border-radius: 5px;
+  padding-inline: 30px;
+  font-weight: 1rem;
+  border: 1px solid transparent;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+}
+
+.rdBtn a {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+.rdBtn.mainBtn {
+  background-color: v.$primaryColor;
+  border-color: v.$primaryColor;
+  color: #fff;
+
+  &:hover {
+    background-color: v.$secondaryColor;
+    border-color: v.$secondaryColor;
+  }
+}
+
+.rdBtn.secondBtn {
+  background-color: v.$secondaryColor;
+  border-color: v.$secondaryColor;
+  color: #fff;
+
+  &:hover {
+    background-color: v.$primaryColor;
+    border-color: v.$secondaryColor;
+  }
+}
+
+.rdBtn.mainBtn,
+.rdBtn.secondBtn {
+  &.smBtn {
+    min-height: max-content;
+    line-height: normal;
+    padding: 5px 10px;
+  }
+}
+
+.rdBtn.mainBtn:disabled,
+.rdBtn.secondBtn:disabled {
+  background-color: rgb(221, 221, 221);
+  color: rgb(160, 160, 160);
+  pointer-events: disabled;
+  border: none;
+  cursor: not-allowed;
+}
+
+// ============================================== //
+// PageStripe
+// ============================================== //
+.pageStripe {
+  height: 45vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.pageStripBackground {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.pageStripBackground::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.75;
+}
+
+.pageStripeTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  z-index: 2;
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 5px;
+}
+
+// ============================================== //
+// myModal
+// ============================================== //
+.myModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+  background-color: rgba(4, 4, 4, 0.53);
+  backdrop-filter: blur(3px);
+}
+
+.myModal.active {
+  opacity: 1;
+  z-index: 1000;
+}
+
+.myModal_backdrop {
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.myModal_content {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+}
+
+// ============================================== //
+// Card
+// ============================================== //
+.myCard {
+  width: clamp(200px, 90%, 600px);
+  height: 100%;
+  border-radius: 20px;
+  position: relative;
+  padding: 1.8rem;
+  border: 2px solid #c3c6ce;
+  transition: 0.5s ease-out;
+  overflow: visible;
+  margin: auto;
+}
+
+.myCard_details {
+  color: black;
+  height: 100%;
+  gap: 0.5em;
+  display: grid;
+  place-content: center;
+}
+
+.myCard_button {
+  transform: translate(-50%, 125%);
+  width: 60%;
+  border-radius: 1rem;
+  border: none;
+  background-color: #008bf8;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+}
+
+.myCard_button a {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+.myCard_text-body {
+  color: rgb(134, 134, 134);
+  font-weight: 300;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.myCard_img {
+  position: relative;
+  height: 8rem;
+  aspect-ratio: 1;
+  margin: auto;
+}
+
+.myCard_text-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.myCard:hover {
+  border-color: #008bf8;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+  background: #f5f5f591;
+}
+
+.myCard:hover .myCard_button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+}
+
+.slick-prev,
+.slick-next {
+  // background-color: brown;
+  width: auto;
+  height: auto;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 2.5rem;
+  color: v.$primaryColor;
+}
